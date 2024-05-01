@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: marianamestre <marianamestre@student.42    +#+  +:+       +#+         #
+#    By: mabrito- <mabrito-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/25 14:01:44 by marianamest       #+#    #+#              #
-#    Updated: 2024/04/28 16:57:36 by marianamest      ###   ########.fr        #
+#    Updated: 2024/05/01 19:07:37 by mabrito-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ main.c
 OFILES	= $(SRCS:.c=.o)
 
 CC = cc
-CFLAGS = -Wall -Wextra -Werror 
+CFLAGS = -Wall -Wextra -Werror -g
 
 all: $(NAME)
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marianamestre <marianamestre@student.42    +#+  +:+       +#+        */
+/*   By: mabrito- <mabrito-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/27 16:05:31 by marianamest       #+#    #+#             */
-/*   Updated: 2024/04/28 17:31:34 by marianamest      ###   ########.fr       */
+/*   Updated: 2024/05/01 20:04:06 by mabrito-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int	main(int ac, char **av)
 		if (is_sorted(&a))
 		{
 			free_nodes(&a);
-			return (1);
+			return (0);
 		}
 		if (ft_lstsize(&a) <= 3)
 			sort3(&a);

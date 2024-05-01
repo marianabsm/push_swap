@@ -6,7 +6,7 @@
 /*   By: mabrito- <mabrito-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/27 02:25:00 by marianamest       #+#    #+#             */
-/*   Updated: 2024/04/29 19:09:48 by mabrito-         ###   ########.fr       */
+/*   Updated: 2024/05/01 21:35:00 by mabrito-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,8 +63,9 @@ int	is_sorted(t_node **stack)
 	return (1);
 }
 
-void	error_exit(char **n)
+void	error_exit(char **n, t_node **stack)
 {
+	free_nodes(stack);
 	write(2, "Error\n", 6);
 	free_strings(n);
 	exit(0);
@@ -84,16 +85,18 @@ void	parser(char **av, t_node **stack)
 		n = ft_split(av[i], ' ');
 		j = -1;
 		if (!n[j + 1])
-			error_exit(n);
+			error_exit(n, stack);
 		while (n[++j])
 		{
 			tmp = ft_atol(n[j]);
+			if ((tmp > 0 && ft_strlen(n[j]) > 10) ||
+					(tmp < 0 && ft_strlen(n[j]) > 11))
+				error_exit(n, stack);
 			if (!is_dup(n, tmp, j) || !is_num(n[j]) || (tmp < INT_MIN || 
 					tmp > INT_MAX) || !is_dup(av, tmp, i))
-				error_exit(n);
+				error_exit(n, stack);
 			new = ft_lstnew(tmp);
 			ft_lstadd_back(stack, new);
-			free_nodes(&new);
 		}
 		free_strings(n);
 	}

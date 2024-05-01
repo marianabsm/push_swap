@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marianamestre <marianamestre@student.42    +#+  +:+       +#+        */
+/*   By: mabrito- <mabrito-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 17:19:32 by marianamest       #+#    #+#             */
-/*   Updated: 2024/04/28 17:19:52 by marianamest      ###   ########.fr       */
+/*   Updated: 2024/05/01 21:38:22 by mabrito-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,3 +92,4 @@ char	**ft_split(const char *s, char c)
 	ft_split_words(s, c, str, word_count);
 	return (str);
 }
+

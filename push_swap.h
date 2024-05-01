@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marianamestre <marianamestre@student.42    +#+  +:+       +#+        */
+/*   By: mabrito- <mabrito-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/27 01:31:35 by marianamest       #+#    #+#             */
-/*   Updated: 2024/04/29 14:01:41 by marianamest      ###   ########.fr       */
+/*   Updated: 2024/05/01 20:52:28 by mabrito-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,5 +103,6 @@ void				pushswap(t_node **a, t_node **b);
 
 /* main */
 int					main(int ac, char **av);
+void				error_exit(char **n, t_node **stack);
 
 #endif

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   revrotate.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marianamestre <marianamestre@student.42    +#+  +:+       +#+        */
+/*   By: mabrito- <mabrito-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/27 14:11:07 by marianamest       #+#    #+#             */
-/*   Updated: 2024/04/28 17:16:40 by marianamest      ###   ########.fr       */
+/*   Updated: 2024/05/01 20:13:41 by mabrito-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ void	revrotate(t_node **stack)
 void	rra(t_node **a)
 {
 	revrotate(a);
-	write(1, "rrb\n", 4);
+	write(1, "rra\n", 4);
 }
 
 void	rrb(t_node **b)
