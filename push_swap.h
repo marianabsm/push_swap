@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mabrito- <mabrito-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marianamestre <marianamestre@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/27 01:31:35 by marianamest       #+#    #+#             */
-/*   Updated: 2024/05/01 20:52:28 by mabrito-         ###   ########.fr       */
+/*   Updated: 2024/05/01 22:01:41 by marianamest      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ void				ft_split_words(const char *s, char c, char **str,
 						int word_count);
 int					ft_word_counter(const char *s, char c);
 char				**ft_split(const char *s, char c);
+void				check_length(int tmp, char **n, int j, t_node **stack);
 
 /* atol */
 long				ft_atol(const char *str);

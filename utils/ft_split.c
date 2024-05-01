@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mabrito- <mabrito-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marianamestre <marianamestre@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 17:19:32 by marianamest       #+#    #+#             */
-/*   Updated: 2024/05/01 21:38:22 by mabrito-         ###   ########.fr       */
+/*   Updated: 2024/05/01 22:01:17 by marianamest      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,7 @@ int	ft_word_counter(const char *s, char c)
 	return (word_count);
 }
 
-char	*ft_write_word(char *word_arr, const char *s, int i,
-		int word_length)
+char	*ft_write_word(char *word_arr, const char *s, int i, int word_length)
 {
 	int	j;
 
@@ -93,3 +92,10 @@ char	**ft_split(const char *s, char c)
 	return (str);
 }
 
+void	check_length(int tmp, char **n, int j, t_node **stack)
+{
+	if ((tmp > 0 && ft_strlen(n[j]) > 10) || (tmp < 0 && ft_strlen(n[j]) > 11))
+	{
+		error_exit(n, stack);
+	}
+}

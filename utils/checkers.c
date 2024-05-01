@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   checkers.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mabrito- <mabrito-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marianamestre <marianamestre@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/27 02:25:00 by marianamest       #+#    #+#             */
-/*   Updated: 2024/05/01 21:35:00 by mabrito-         ###   ########.fr       */
+/*   Updated: 2024/05/01 22:02:05 by marianamest      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,11 +89,9 @@ void	parser(char **av, t_node **stack)
 		while (n[++j])
 		{
 			tmp = ft_atol(n[j]);
-			if ((tmp > 0 && ft_strlen(n[j]) > 10) ||
-					(tmp < 0 && ft_strlen(n[j]) > 11))
-				error_exit(n, stack);
-			if (!is_dup(n, tmp, j) || !is_num(n[j]) || (tmp < INT_MIN || 
-					tmp > INT_MAX) || !is_dup(av, tmp, i))
+			check_length(tmp, n, j, stack);
+			if (!is_dup(n, tmp, j) || !is_num(n[j]) || (tmp < INT_MIN
+					|| tmp > INT_MAX) || !is_dup(av, tmp, i))
 				error_exit(n, stack);
 			new = ft_lstnew(tmp);
 			ft_lstadd_back(stack, new);
